@@ -1,0 +1,8 @@
+.pannel-buttons{
+    display: grid;
+    padding: 30px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap:20px;
+    
+  }
