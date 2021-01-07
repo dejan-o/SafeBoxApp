@@ -1,5 +1,5 @@
 
-.pannel {
+.panel {
   position: relative;
   background-color: #7d7d7f;
   min-width: 25vw;
@@ -11,7 +11,7 @@
 
 
 @media screen and (max-width:1024px){
-  .pannel{
+  .panel{
    width: 45vw;
   }
  }
@@ -20,7 +20,7 @@
 
 
 @media screen and (max-width:750px){
- .pannel{
+ .panel{
   width: 80vw;
  }
 }
