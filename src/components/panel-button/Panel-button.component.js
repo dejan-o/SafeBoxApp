@@ -1,15 +1,29 @@
 import React from 'react';
 import './Panel-button.scss';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { handleKeyPress } from '../../redux/actions';
 
-const PanelButton = ( { buttonValue } ) => {
+const PanelButton = ( { buttonValue, handleKeyPress } ) => {
+	
+
 	return (
-		<button className="panel-button" value={buttonValue} onClick={( (event) => console.log(event.target.value))}>{buttonValue}</button>
+		<button className="panel-button" value={buttonValue} onClick={handleKeyPress}>{buttonValue}</button>
 	);
 };
 
 PanelButton.propTypes = {
-	buttonValue: PropTypes.any.isRequired
+	buttonValue: PropTypes.any.isRequired,
+	handleKeyPress: PropTypes.func.isRequired,
 };
 
-export default PanelButton;
+const mapDispatchToProps = (dispatch) => {
+	return {
+		handleKeyPress: (event) => dispatch(handleKeyPress(event.target.value))
+	};
+};
+
+
+
+
+export default connect(null, mapDispatchToProps)(PanelButton);

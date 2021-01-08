@@ -1,9 +1,11 @@
 import React from 'react';
 import './Serial-number.scss';
+import { serialNumber } from '../../constants';
+
 const SerialNumber = () => {
 	return (
 		<div className="serial-number">
-            S / N: 4815162342
+            S / N: {serialNumber}
 		</div>
 	);
 };

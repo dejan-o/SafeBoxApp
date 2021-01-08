@@ -1,6 +1,4 @@
 .panel-screen {
- 
-    background-color: #7fffff;
     border-radius: 5px;
     height: 20vmin;
     border: 2px solid rgba(0,0,0,0.7);
@@ -10,8 +8,8 @@
     &__left{
         font-size: 1.4rem;
         position: absolute;
-        top: 15px;
-        left:10px;
+        top: 1rem;
+        left:.6rem;
     }
 
     &__main{
@@ -19,9 +17,17 @@
         font-weight: 500;
         letter-spacing: 1.5;
         position: absolute;
-        bottom: 20px;
-        right: 30px;
+        bottom: 1.3rem;
+        right: 1.9rem;
     }
+}
+
+.light-on {
+    background-color: #7fffff;
+}
+
+.light-off {
+    background-color:  #47b2b2;
 }
 
 @media screen and (max-width:750px){
@@ -29,3 +35,5 @@
      height: 30vmin;
     }
    }
+
+   

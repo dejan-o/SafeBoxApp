@@ -5,10 +5,12 @@ import PanelButtons from './components/panel-buttons/Panel-buttons.component';
 import SerialNumber from './components/serial-number/Serial-number.component';
 
 function App() {
+
+
 	return (
 		<div className="panel">
-			<PanelScreen/>
-			<PanelButtons/>
+			<PanelScreen />
+			<PanelButtons />
 			<SerialNumber/>
 		</div>);
 }
