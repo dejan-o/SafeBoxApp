@@ -6,9 +6,12 @@ import { handleKeyPress } from '../../redux/actions';
 
 const PanelButton = ( { buttonValue, handleKeyPress } ) => {
 	
+	function handleKeyClick(event){
+		handleKeyPress(event.target.value);
+	}
 
 	return (
-		<button className="panel-button" value={buttonValue} onClick={handleKeyPress}>{buttonValue}</button>
+		<button className="panel-button" value={buttonValue} onClick={handleKeyClick}>{buttonValue}</button>
 	);
 };
 
@@ -19,7 +22,7 @@ PanelButton.propTypes = {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		handleKeyPress: (event) => dispatch(handleKeyPress(event.target.value))
+		handleKeyPress: (key) => dispatch(handleKeyPress(key))
 	};
 };
 

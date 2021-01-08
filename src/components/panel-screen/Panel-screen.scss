@@ -5,14 +5,14 @@
     position: relative;
     color: #434343;
    
-    &__left{
+    &__status{
         font-size: 1.4rem;
         position: absolute;
         top: 1rem;
         left:.6rem;
     }
 
-    &__main{
+    &__message{
         font-size: 2.5rem;
         font-weight: 500;
         letter-spacing: 1.5;
@@ -22,11 +22,11 @@
     }
 }
 
-.light-on {
+.panel-screen--light-on {
     background-color: #7fffff;
 }
 
-.light-off {
+.panel-screen--light-off {
     background-color:  #47b2b2;
 }
 

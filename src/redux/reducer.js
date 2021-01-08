@@ -6,6 +6,7 @@ const initState = {
 	isActive: false,
 	code: '',
 	inputSequence: '',
+	isServiceMode: false,
 };
 
 const mainReducer = (state = initState, action = {}) => {
@@ -22,6 +23,8 @@ const mainReducer = (state = initState, action = {}) => {
 		return { ...state, code: action.payload };
 	case actionTypes.RESET_INPUT_SEQUENCE:
 		return { ...state, inputSequence: '' };
+	case actionTypes.SET_SERVICE_MODE:
+		return { ...state, isServiceMode: action.payload };
 	default:
 		return state;
 	}
