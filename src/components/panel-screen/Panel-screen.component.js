@@ -7,14 +7,14 @@ import { screenMessages } from '../../constants';
 
 const PanelScreen = ({ screenMessage, inputSequence, isLocked, setScreenMessage, resetInputSequence, setIsLocked, setBoxCode, boxCode, setScreenActive, isActive }) => {
 	
-	//checking locking sequence (locking sequence should containt 6 digits and 7th character 'L')
+	//checking locking sequence (locking sequence should contain 6 digits and 7th character 'L')
 	function checkLockingSequence(sequence){
 		if(sequence[sequence.length - 1] === 'L' && sequence.length === 7 && typeof +sequence.substring(0, 6) === 'number')
 			return true;
 		return false;
 	}
 
-	//checking unlocking sequence (unlocking sequence should containt 6 digits)
+	//checking unlocking sequence (unlocking sequence should contain 6 digits)
 	function checkUnlockingSequence(sequence, boxCode){
 		if(sequence.length === 6 && typeof +sequence === 'number' && sequence === boxCode)
 			return true;
