@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/safeBoxApp/static/css/main.32915f72.chunk.css",
+    "main.js": "/safeBoxApp/static/js/main.9b0e63ac.chunk.js",
+    "main.js.map": "/safeBoxApp/static/js/main.9b0e63ac.chunk.js.map",
+    "runtime-main.js": "/safeBoxApp/static/js/runtime-main.7ae9a3ed.js",
+    "runtime-main.js.map": "/safeBoxApp/static/js/runtime-main.7ae9a3ed.js.map",
+    "static/js/2.19ec7c36.chunk.js": "/safeBoxApp/static/js/2.19ec7c36.chunk.js",
+    "static/js/2.19ec7c36.chunk.js.map": "/safeBoxApp/static/js/2.19ec7c36.chunk.js.map",
+    "index.html": "/safeBoxApp/index.html",
+    "static/css/main.32915f72.chunk.css.map": "/safeBoxApp/static/css/main.32915f72.chunk.css.map",
+    "static/js/2.19ec7c36.chunk.js.LICENSE.txt": "/safeBoxApp/static/js/2.19ec7c36.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ae9a3ed.js",
+    "static/js/2.19ec7c36.chunk.js",
+    "static/css/main.32915f72.chunk.css",
+    "static/js/main.9b0e63ac.chunk.js"
+  ]
+}
