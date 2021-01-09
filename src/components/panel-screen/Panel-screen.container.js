@@ -24,14 +24,14 @@ const PanelScreenContainer = ({
 	
 	//checking locking sequence (locking sequence should contain 6 digits and 7th character 'L')
 	function checkLockingSequence(sequence){
-		if(sequence[sequence.length - 1] === 'L' && sequence.length === 7 && typeof +sequence.substring(0, 6) === 'number')
+		if(sequence[sequence.length - 1] === 'L' && sequence.length === 7 &&  !isNaN(+sequence.substring(0, 6)))
 			return true;
 		return false;
 	}
 
 	//checking unlocking sequence (unlocking sequence should contain 6 digits)
 	function checkUnlockingSequence(sequence, boxCode){
-		if(sequence.length === 6 && typeof +sequence === 'number' && sequence === boxCode && !isServiceMode)
+		if(sequence.length === 6 && !isNaN(+sequence.substring(0, 6)) && sequence === boxCode && !isServiceMode)
 			return true;
 		return false;
 	}

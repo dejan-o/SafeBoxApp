@@ -6,13 +6,13 @@ import { buttonValues } from '../../constants';
 import { handleKeyPress } from '../../redux/actions';
 import { PropTypes } from 'prop-types';
 
-const PanelButtons = ({ handleKeyPress, screenMessage }) => {
+const PanelButtons = ({ handleKeyPress, screenMessage, isLocked, inputSequence }) => {
 	const buttons = buttonValues;
-
 	//Helper function for handling keyboard inputs
 	function handleKeyboardInput(event){
-		if(screenMessage)
+		if(screenMessage || (!isLocked && inputSequence[inputSequence.length-1] === 'L')){
 			return;
+		}
 		const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'L', '*'];
 		if(validKeys.includes(event.key))
 			handleKeyPress(event.key);
@@ -23,7 +23,7 @@ const PanelButtons = ({ handleKeyPress, screenMessage }) => {
 		document.addEventListener('keypress', handleKeyboardInput);
 
 		return () => document.removeEventListener('keypress', handleKeyboardInput);
-	}, [screenMessage]);
+	}, [screenMessage, inputSequence]);
 
 	
 	return (
@@ -38,6 +38,8 @@ const PanelButtons = ({ handleKeyPress, screenMessage }) => {
 PanelButtons.propTypes = {
 	handleKeyPress: PropTypes.func.isRequired,
 	screenMessage: PropTypes.string.isRequired,
+	isLocked: PropTypes.bool.isRequired,
+	inputSequence: PropTypes.string.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -48,7 +50,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
 	return {
-		screenMessage: state.screenMessage
+		screenMessage: state.screenMessage,
+		inputSequence: state.inputSequence,
+		isLocked: state.isLocked,
 	};
 };
 

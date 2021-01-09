@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { handleKeyPress } from '../../redux/actions';
 
-const PanelButton = ( { buttonValue, handleKeyPress, screenMessage } ) => {
+const PanelButton = ( { buttonValue, handleKeyPress, screenMessage, isLocked, inputSequence } ) => {
 	
 	function handleKeyClick(event){
-		if(screenMessage)
+		if(screenMessage || !isLocked && inputSequence[inputSequence.length - 1] === 'L')
 			return;
 		handleKeyPress(event.target.value);
 	}
@@ -21,6 +21,8 @@ PanelButton.propTypes = {
 	buttonValue: PropTypes.any.isRequired,
 	handleKeyPress: PropTypes.func.isRequired,
 	screenMessage: PropTypes.string.isRequired,
+	isLocked: PropTypes.bool.isRequired,
+	inputSequence: PropTypes.string.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -31,7 +33,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
 	return {
-		screenMessage: state.screenMessage
+		screenMessage: state.screenMessage,
+		isLocked: state.isLocked,
+		inputSequence: state.inputSequence,
 	};
 };
 

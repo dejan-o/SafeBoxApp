@@ -46,7 +46,7 @@ export const serviceModeProcess = (inputSequence, serialNumber, unlockBox, rejec
 	)
 		.then(response=>response.json())
 		.then(response=>{
-			if(response === serialNumber)
+			if(response.sn === serialNumber)
 				unlockBox();
 			else
 				rejectInputSequence();
