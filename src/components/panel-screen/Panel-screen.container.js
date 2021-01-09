@@ -93,10 +93,12 @@ const PanelScreenContainer = ({
 	function renderSequence(sequence){
 		if(!sequence.length)
 			return '';
-		if(sequence > 10)
+		if(sequence.length > 10){
 			sequence = sequence.substring(sequence.length-10);
-		if(sequence[sequence.length - 1] === 'L' && !isLocked)
+		}
+		if(sequence[sequence.length - 1] === 'L' && !isLocked){
 			return sequence.substring(0, sequence.length - 1);
+		}
 		return sequence;
 	}
 

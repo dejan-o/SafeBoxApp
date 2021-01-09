@@ -7,7 +7,7 @@ import { handleKeyPress } from '../../redux/actions';
 const PanelButton = ( { buttonValue, handleKeyPress, screenMessage, isLocked, inputSequence } ) => {
 	
 	function handleKeyClick(event){
-		if(screenMessage || !isLocked && inputSequence[inputSequence.length - 1] === 'L')
+		if(screenMessage || !isLocked && inputSequence.includes('L'))
 			return;
 		handleKeyPress(event.target.value);
 	}
