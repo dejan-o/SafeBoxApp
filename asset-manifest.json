@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SafeBoxApp/static/css/main.a2644617.chunk.css",
-    "main.js": "/SafeBoxApp/static/js/main.8fe46d2f.chunk.js",
-    "main.js.map": "/SafeBoxApp/static/js/main.8fe46d2f.chunk.js.map",
+    "main.js": "/SafeBoxApp/static/js/main.b1edaaa1.chunk.js",
+    "main.js.map": "/SafeBoxApp/static/js/main.b1edaaa1.chunk.js.map",
     "runtime-main.js": "/SafeBoxApp/static/js/runtime-main.74513252.js",
     "runtime-main.js.map": "/SafeBoxApp/static/js/runtime-main.74513252.js.map",
     "static/js/2.d96bf33f.chunk.js": "/SafeBoxApp/static/js/2.d96bf33f.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.74513252.js",
     "static/js/2.d96bf33f.chunk.js",
     "static/css/main.a2644617.chunk.css",
-    "static/js/main.8fe46d2f.chunk.js"
+    "static/js/main.b1edaaa1.chunk.js"
   ]
 }
