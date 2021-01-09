@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/SafeBoxApp/static/css/main.a2644617.chunk.css",
-    "main.js": "/SafeBoxApp/static/js/main.9b0e63ac.chunk.js",
-    "main.js.map": "/SafeBoxApp/static/js/main.9b0e63ac.chunk.js.map",
+    "main.js": "/SafeBoxApp/static/js/main.a705fe77.chunk.js",
+    "main.js.map": "/SafeBoxApp/static/js/main.a705fe77.chunk.js.map",
     "runtime-main.js": "/SafeBoxApp/static/js/runtime-main.74513252.js",
     "runtime-main.js.map": "/SafeBoxApp/static/js/runtime-main.74513252.js.map",
-    "static/js/2.19ec7c36.chunk.js": "/SafeBoxApp/static/js/2.19ec7c36.chunk.js",
-    "static/js/2.19ec7c36.chunk.js.map": "/SafeBoxApp/static/js/2.19ec7c36.chunk.js.map",
+    "static/js/2.d96bf33f.chunk.js": "/SafeBoxApp/static/js/2.d96bf33f.chunk.js",
+    "static/js/2.d96bf33f.chunk.js.map": "/SafeBoxApp/static/js/2.d96bf33f.chunk.js.map",
     "index.html": "/SafeBoxApp/index.html",
     "static/css/main.a2644617.chunk.css.map": "/SafeBoxApp/static/css/main.a2644617.chunk.css.map",
-    "static/js/2.19ec7c36.chunk.js.LICENSE.txt": "/SafeBoxApp/static/js/2.19ec7c36.chunk.js.LICENSE.txt"
+    "static/js/2.d96bf33f.chunk.js.LICENSE.txt": "/SafeBoxApp/static/js/2.d96bf33f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.74513252.js",
-    "static/js/2.19ec7c36.chunk.js",
+    "static/js/2.d96bf33f.chunk.js",
     "static/css/main.a2644617.chunk.css",
-    "static/js/main.9b0e63ac.chunk.js"
+    "static/js/main.a705fe77.chunk.js"
   ]
 }
