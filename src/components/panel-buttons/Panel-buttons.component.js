@@ -6,11 +6,13 @@ import { buttonValues } from '../../constants';
 import { handleKeyPress } from '../../redux/actions';
 import { PropTypes } from 'prop-types';
 
-const PanelButtons = ({ handleKeyPress }) => {
+const PanelButtons = ({ handleKeyPress, screenMessage }) => {
 	const buttons = buttonValues;
 
 	//Helper function for handling keyboard inputs
 	function handleKeyboardInput(event){
+		if(screenMessage)
+			return;
 		const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'L', '*'];
 		if(validKeys.includes(event.key))
 			handleKeyPress(event.key);
@@ -35,6 +37,7 @@ const PanelButtons = ({ handleKeyPress }) => {
 
 PanelButtons.propTypes = {
 	handleKeyPress: PropTypes.func.isRequired,
+	screenMessage: PropTypes.string.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -43,6 +46,10 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
+const mapStateToProps = (state) => {
+	return {
+		screenMessage: state.screenMessage
+	};
+};
 
-
-export default connect(null, mapDispatchToProps)(PanelButtons);
+export default connect(mapStateToProps, mapDispatchToProps)(PanelButtons);

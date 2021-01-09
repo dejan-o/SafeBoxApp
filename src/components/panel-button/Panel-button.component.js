@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { handleKeyPress } from '../../redux/actions';
 
-const PanelButton = ( { buttonValue, handleKeyPress } ) => {
+const PanelButton = ( { buttonValue, handleKeyPress, screenMessage } ) => {
 	
 	function handleKeyClick(event){
+		if(screenMessage)
+			return;
 		handleKeyPress(event.target.value);
 	}
 
@@ -18,6 +20,7 @@ const PanelButton = ( { buttonValue, handleKeyPress } ) => {
 PanelButton.propTypes = {
 	buttonValue: PropTypes.any.isRequired,
 	handleKeyPress: PropTypes.func.isRequired,
+	screenMessage: PropTypes.string.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -26,7 +29,11 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
+const mapStateToProps = (state) => {
+	return {
+		screenMessage: state.screenMessage
+	};
+};
 
 
-
-export default connect(null, mapDispatchToProps)(PanelButton);
+export default connect(mapStateToProps, mapDispatchToProps)(PanelButton);
