@@ -23,7 +23,7 @@ const PanelButtons = ({ handleKeyPress, screenMessage }) => {
 		document.addEventListener('keypress', handleKeyboardInput);
 
 		return () => document.removeEventListener('keypress', handleKeyboardInput);
-	}, []);
+	}, [screenMessage]);
 
 	
 	return (
