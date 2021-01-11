@@ -1,14 +1,16 @@
+@import '../../style/colors.scss';
+
 .panel-button {
     justify-self: center;
     height: 100px;
     width: 100px;
     border-radius: 5px;
-    background-color: #63636e;
+    background-color: $button;
     border: 1px solid black;
     box-shadow: 2px 2px 4px rgba(0,0,0,.8);
     font-size: 2.5rem;
     font-weight: 500;
-    color: #f3f3f3;
+    color: $button-text;
     outline: none;
     cursor: pointer;
     font-family: 'Roboto Mono';

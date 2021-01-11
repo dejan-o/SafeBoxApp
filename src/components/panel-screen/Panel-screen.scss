@@ -1,33 +1,19 @@
+@import '../../style/colors.scss';
+
 .panel-screen {
     border-radius: 5px;
     height: 20vmin;
     border: 2px solid rgba(0,0,0,0.7);
     position: relative;
-    color: #434343;
-   
-    &__status{
-        font-size: 1.4rem;
-        position: absolute;
-        top: 1rem;
-        left:.6rem;
-    }
-
-    &__message{
-        font-size: 2.5rem;
-        font-weight: 500;
-        letter-spacing: 1.5;
-        position: absolute;
-        bottom: 1.3rem;
-        right: 1.9rem;
-    }
+    color: $screen-text;
 }
 
 .panel-screen--light-on {
-    background-color: #7fffff;
+    background-color: $screen-light-on;
 }
 
 .panel-screen--light-off {
-    background-color:  #47b2b2;
+    background-color:  $screen-light-off;
 }
 
 @media screen and (max-width:750px){

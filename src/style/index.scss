@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+@import './colors.scss';
 
 * {
   margin: 0;
@@ -9,7 +10,7 @@
 
 body {
   font-family: 'Roboto Mono', monospace, Arial, sans-serif;
-  background-color:#434343;
+  background-color: $background;
   display: flex;
   justify-content: center;
   align-items: center;

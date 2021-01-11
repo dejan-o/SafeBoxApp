@@ -1,7 +1,8 @@
+@import './colors.scss';
 
 .panel {
   position: relative;
-  background-color: #7d7d7f;
+  background-color: $panel-body;
   width: 480px;
   border-radius: 5px;
   border: 1px solid black;
@@ -9,15 +10,11 @@
   padding: 2.5rem;
 }
 
-
 @media screen and (max-width:1024px){
   .panel{
    width: 510px;
   }
  }
-
-
-
 
 @media screen and (max-width:510px){
  .panel{

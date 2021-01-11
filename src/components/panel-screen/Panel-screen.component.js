@@ -1,25 +1,30 @@
 import React from 'react';
 import './Panel-screen.scss';
 import PropTypes from 'prop-types';
+import PanelScreenStatus from '../panel-screen-status/Panel-screen-status.component';
+import PanelScreenMessage from '../panel-screen-message/Panel-screen-message.component';
+import { connect } from 'react-redux';
 
-
-const PanelScreen = ({ 	inputSequence, isLocked, isActive, screenMessage, renderSequence }) => {
+const PanelScreen = ({ isActive }) => {
 	
 	return (
 		<section className={`panel-screen ${isActive ? 'panel-screen--light-on' : 'panel-screen--light-off'}`}>
-			<span className="panel-screen__status">{ isLocked ? 'Locked' : 'Unlocked' }</span>
-			<span className="panel-screen__message">{ renderSequence(inputSequence) || screenMessage }</span>
+			<PanelScreenStatus />
+			<PanelScreenMessage />
 		</section>
 	);
 };
 
 PanelScreen.propTypes = {
-	screenMessage: PropTypes.string.isRequired,
-	inputSequence: PropTypes.string.isRequired,
-	isLocked: PropTypes.bool.isRequired,
 	isActive: PropTypes.bool.isRequired,
-	renderSequence: PropTypes.func.isRequired,
 };
 
 
-export default PanelScreen;
+const mapStateToProps = (state) => {
+	return {
+		isActive: state.screen.isActive,
+	};
+};
+
+
+export default connect(mapStateToProps)(PanelScreen);
