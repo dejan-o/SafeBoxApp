@@ -1,6 +1,6 @@
 import React from 'react';
 import './Serial-number.scss';
-import { serialNumber } from '../../constants';
+import { serialNumber } from 'constants.js';
 
 const SerialNumber = () => {
 	return (

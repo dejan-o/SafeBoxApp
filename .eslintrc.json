@@ -5,7 +5,9 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:import/warnings",
+        "plugin:import/errors"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,6 +19,13 @@
     "plugins": [
         "react"
     ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+              "moduleDirectory": ["node_modules", "src/"]
+            }
+          }
+    },
     "rules":  {
         "quotes": ["error","single"],
         "semi" : ["error","always"],

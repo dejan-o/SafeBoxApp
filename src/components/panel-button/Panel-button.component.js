@@ -2,7 +2,7 @@ import React from 'react';
 import './Panel-button.scss';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { handleKeyPress } from '../../redux/safeBoxLogic/logicActions';
+import { handleKeyPress } from 'redux/safeBoxLogic/logicActions';
 import { handleKeyClick } from './utils';
 
 const PanelButton = ( { buttonValue, handleKeyPress, isConfirmed } ) => {

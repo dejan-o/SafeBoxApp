@@ -1,8 +1,8 @@
 import React from 'react';
 import './Panel-screen.scss';
 import PropTypes from 'prop-types';
-import PanelScreenStatus from '../panel-screen-status/Panel-screen-status.component';
-import PanelScreenMessage from '../panel-screen-message/Panel-screen-message.component';
+import PanelScreenStatus from 'components/panel-screen-status/Panel-screen-status.component';
+import PanelScreenMessage from 'components/panel-screen-message/Panel-screen-message.component';
 import { connect } from 'react-redux';
 
 const PanelScreen = ({ isActive }) => {

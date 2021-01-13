@@ -1,7 +1,7 @@
 import { takeLatest, delay, all, put, call, select } from 'redux-saga/effects';
 import logicTypes from './logicTypes';
 import { setConfirm } from './logicActions';
-import { setScreenActive } from '../screen/screenActions';
+import { setScreenActive } from 'redux/screen/screenActions';
 import { fetchData, checkIsSequenceForServiceMode, checkUnlockingSequence, checkLockingSequence, unlockBox, saveBoxCode, rejectSequence, enterServiceMode, processServiceSequence } from './sagaUtils';
 export const getConfirm = (state) => state.logic.isConfirmed;
 export const getIsLocked = (state) => state.logic.isLocked;
@@ -26,6 +26,7 @@ export function* onKeyPress({ payload }){
     
 	if(!isLocked && payload ==='L'){
 		yield put(setConfirm(true));
+		confirm = true;
 	}	
 	yield delay(1200);
 

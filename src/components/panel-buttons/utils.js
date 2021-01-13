@@ -1,4 +1,4 @@
-import { buttonValues } from '../../constants';
+import { buttonValues } from 'constants.js';
 
 export function handleKeyboardInput(event){
 	return (isConfirmed, handlerFunction) => {

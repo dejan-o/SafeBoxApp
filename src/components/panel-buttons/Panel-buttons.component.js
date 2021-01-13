@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import PanelButton from '../panel-button/Panel-button.component';
+import PanelButton from 'components/panel-button/Panel-button.component';
 import './Panel-buttons.scss';
 import { connect } from 'react-redux';
-import { buttonValues } from '../../constants';
-import { handleKeyPress } from '../../redux/safeBoxLogic/logicActions';
+import { buttonValues } from 'constants.js';
+import { handleKeyPress } from 'redux/safeBoxLogic/logicActions';
 import { PropTypes } from 'prop-types';
 import { handleKeyboardInput } from './utils';
 
