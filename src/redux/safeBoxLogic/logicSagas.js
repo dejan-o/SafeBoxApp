@@ -19,19 +19,19 @@ export function* onKeyPress({ payload }){
 	let boxCode = yield select(getBoxCode);
 	let isServiceMode = yield select(getIsServiceMode);
 	let isActive = yield select(getIsActive);
-
+	let confirmed = confirm;
 	//preprocessing 
 	if(!isActive)
 		yield put(setScreenActive(true));
     
 	if(!isLocked && payload ==='L'){
 		yield put(setConfirm(true));
-		confirm = true;
+		confirmed = true;
 	}	
 	yield delay(1200);
 
 	//processing sequence
-	if(!confirm)
+	if(!confirmed)
 		yield put(setConfirm(true));
 	if(!isLocked){
 		switch(true){

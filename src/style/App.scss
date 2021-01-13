@@ -7,16 +7,17 @@
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 0 5px black;
-  padding: 2.5rem;
+  padding: 3.5rem;
 }
 
 @media screen and (max-width:1024px){
   .panel{
    width: 510px;
+   padding: 4.5rem;
   }
  }
 
-@media screen and (max-width:510px){
+@media screen and (max-width:750px){
  .panel{
   width: 380px;
  }

@@ -28,9 +28,16 @@
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:550px){
     .panel-button{
         height: 70px;
         width: 70px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .panel-button{
+        height: 60px;
+        width: 60px;
     }
 }
